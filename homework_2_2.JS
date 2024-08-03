@@ -1,0 +1,15 @@
+onsole.log(undefined + 1);
+onsole.log('true' == true);
+onsole.log(false == 'false');
+onsole.log(null == '');
+onsole.log(3 ** (9 / 3));
+onsole.log(!!'false' == !!'true');
+onsole.log(0 || '0' && 1);
+onsole.log(1 < 2 < 3);
+onsole.log('foo'+ + +'bar');
+onsole.log(3 ** 2 / 3);
+onsole.log(1 < 2 > 3);
+onsole.log((+null == false) < 1);
+onsole.log(false && true || true);
+onsole.log(false && (true || true));
+onsole.log((+null == false) < 1 ** 5);
