@@ -1,15 +1,15 @@
-undefined + 1;
-'true' == true
-false == 'false'
-null == ''
-3 ** (9 / 3);
-!!'false' == !!'true'
-0 || '0' && 1
-1 < 2 < 3
-'foo'+ + +'bar'
-3 ** 2 / 3;
-1 < 2 > 3
-(+null == false) < 1;
-false && true || true
-false && (true || true);
-(+null == false) < 1 ** 5;
+onsole.log(undefined + 1);
+onsole.log('true' == true);
+onsole.log(false == 'false');
+onsole.log(null == '');
+onsole.log(3 ** (9 / 3));
+onsole.log(!!'false' == !!'true');
+onsole.log(0 || '0' && 1);
+onsole.log(1 < 2 < 3);
+onsole.log('foo'+ + +'bar');
+onsole.log(3 ** 2 / 3);
+onsole.log(1 < 2 > 3);
+onsole.log((+null == false) < 1);
+onsole.log(false && true || true);
+onsole.log(false && (true || true));
+onsole.log((+null == false) < 1 ** 5);
