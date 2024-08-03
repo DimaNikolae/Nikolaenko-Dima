@@ -6,7 +6,7 @@ console.log(null + 1);
 
 console.log('five' + + 'two');
 
-console.log(2 && 7):
+console.log(2 && 7);
 
 console.log(+'40' + +'2');
 
