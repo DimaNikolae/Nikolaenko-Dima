@@ -1,9 +1,11 @@
-let num = 15
+let number = 10
 
-if (num / 3) {
-    console.log("Fizz")
-} else if (num / 5) {
-    console.log("Buzz")
-} else if (num / 3 || 5) {
-    console.log("FizzBuzz")
+function fizzBuzz(number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+        console.log("FizzBuzz"); 
+    } else if (number % 3 === 0) {
+        console.log("Fizz");
+    } else if (number % 5 === 0) {
+        console.log("Buzz")
+    }
 }
