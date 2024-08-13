@@ -1,46 +1,22 @@
-let n = prompt("Введіть число:");
+let nam = prompt("Задайте числое")
+
 let isPrime = true;
 
-if (n <= 1) {
-    isPrime = false; 
-} else if (n <= 3) {
-    isPrime = true;  
-} else if (n % 2 === 0 || n % 3 === 0) {
-    isPrime = false; 
+if (nam <= 1) {
+    isPrime = false;
 } else {
-    
-    for (let i = 5; i * i <= n; i += 6) {
-        if (n % i === 0 || n % (i + 2) === 0) {
+    for (let i = 2; i <= Math.sqrt(nam); i++) {
+        if (nam % i === 0) {
             isPrime = false;
             break;
         }
     }
 }
 
-
 if (isPrime) {
-    console.log(`Число ${n} є простим числом`);
+    console.log(`Число ${nam} є простим числом.`);
 } else {
-    console.log(`Число ${n} не є простим числом`);
-}
-
-
-
-
-let N = prompt("Задайте число тут")
-
-for (let num = 1; num <= N; num++) {
-    let sum = 0;
-
-    for (let i = 1; i <= num / 2; i++) {
-        if (num % i === 0) {
-            sum += i;
-        }
-    }
-
-    if (sum === num) {
-        console.log(`Число ${num} є досконалим числом.`);
-    }
+    console.log(`Число ${nam} не є простим числом.`);
 }
 
 
