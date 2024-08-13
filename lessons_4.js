@@ -21,9 +21,11 @@ if (isPrime) {
 
 
 
-let N = prompt("Задайте число тут")
+let maxNumber = prompt("Задайте число тут")
 
-for (let num = 1; num <= N; num++) {
+console.log(`Досконалі числа в діапазоні від 1 до ${maxNumber}:`);
+
+for (let num = 1; num <= maxNumber; num++) {
     let sum = 0;
 
     for (let i = 1; i <= num / 2; i++) {
@@ -31,6 +33,7 @@ for (let num = 1; num <= N; num++) {
             sum += i;
         }
     }
+
 
     if (sum === num) {
         console.log(`Число ${num} є досконалим числом.`);
