@@ -2,8 +2,7 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-// Приклад використання:
-console.log(reverseString("Привіт")); // "тівирП"
+console.log(reverseString("Привіт")); // Ведіть слово
 
 
 
@@ -19,4 +18,15 @@ function isPalindrome(str) {
     }
 }
 
-isPalindrome("А роза упала на лапу Азорі"); // ВВЕДІТЬ ДЛЯ ПЕРЕВІРКИ
+isPalindrome("А роза упала на лапу Азора"); // ВВЕДІТЬ ДЛЯ ПЕРЕВІРКИ
+
+
+function findGCD(a, b) {
+    // Використовуємо рекурсію для знаходження НСД
+    if (b === 0) {
+        return a;
+    }
+    return findGCD(b, a % b);
+}
+
+console.log(findGCD(48, 18)); // Введіть числа
