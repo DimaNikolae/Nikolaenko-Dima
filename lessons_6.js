@@ -1,13 +1,9 @@
-function doubleLetter(str) {
-    let result = '';
-    
-    for (let i = 0; i < str.length; i++) {
-        result += str[i] + str[i];
+function findGCD(a, b) {
+    // Використовуємо рекурсію для знаходження НСД
+    if (b === 0) {
+        return a;
     }
-    
-    return result;
+    return findGCD(b, a % b);
 }
 
-// Приклад використання:
-console.log(doubleLetter("hello")); // "hheelllloo"
-console.log(doubleLetter("abc")); // "aabbcc"
+console.log(findGCD(48, 18)); // Введіть числа

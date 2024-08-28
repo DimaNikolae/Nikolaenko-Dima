@@ -1,24 +1,41 @@
 function reverseString(str) {
-    return str.split('').reverse().join('');
+    let reversedStr = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+    return reversedStr;
 }
 
-console.log(reverseString("Привіт")); // Ведіть слово
-
-
+// Виклик функції з виведенням результату
+console.log(reverseString("Привіт світ"));
 
 
 function isPalindrome(str) {
-    const cleanedStr = str.toLowerCase().replace(/[^a-zа-я0-9]/g, '');
-    const reversedStr = cleanedStr.split('').reverse().join('');
-    
-    if (cleanedStr === reversedStr) {
-        console.log("Речення є паліндромом.");
-    } else {
-        console.log("Речення не є паліндромом.");
+    // Перетворюємо рядок на нижній регістр і видаляємо всі неалфавітні символи
+    let cleanedStr = '';
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (char.match(/[a-zа-я0-9]/i)) {
+            cleanedStr += char;
+        }
     }
+
+    // Перевіряємо, чи є очищений рядок паліндромом
+    let len = cleanedStr.length;
+    for (let i = 0; i < len / 2; i++) {
+        if (cleanedStr[i] !== cleanedStr[len - 1 - i]) {
+            console.log("Речення не є паліндромом.");
+            return false;
+        }
+    }
+
+    console.log("Речення є паліндромом.");
+    return true;
 }
 
-isPalindrome("А роза упала на лапу Азора"); // ВВЕДІТЬ ДЛЯ ПЕРЕВІРКИ
+// Приклад речення
+isPalindrome("оппо");
+
 
 
 function findGCD(a, b) {
