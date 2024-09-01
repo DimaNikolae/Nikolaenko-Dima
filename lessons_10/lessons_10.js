@@ -124,7 +124,7 @@ console.log(memoizedFunction1(3, 4)); // Використовує кешован
 console.log(memoizedFunction1(4, 5)); // Використовує кешований результат
 
 
-function memoize2(fn, maxCacheSize) {
+function memoize2(fn, maxCacheSize2) {
     const cache = new Map();
     const resultToKey = new Map();
 
@@ -146,7 +146,7 @@ function memoize2(fn, maxCacheSize) {
         resultToKey.set(resultKey, key);
 
         // Якщо кеш перевищує максимальний розмір, видаляємо найстаріший запис
-        if (cache.size > maxCacheSize) {
+        if (cache.size > maxCacheSize2) {
             // Видаляємо найстаріший запис
             const oldestKey = cache.keys().next().value;
             cache.delete(oldestKey);
@@ -173,7 +173,7 @@ const slowFunction2 = (x, y) => {
     return x + y;
 };
 
-const maxCacheSize2 = 7;
+const maxCacheSize2 = 3;
 const memoizedFunction2 = memoize2(slowFunction2, maxCacheSize2);
 
 console.log(memoizedFunction2(1, 2)); // Обчислює і кешує результат
